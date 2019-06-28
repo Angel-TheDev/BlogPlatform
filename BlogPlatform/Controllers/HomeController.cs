@@ -6,10 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BlogPlatform.Controllers
 {
-    public class TagController : Controller
+    public class HomeController : Controller
     {
-        public IActionResult Index()
+        public ViewResult Index()
         {
+
             return View();
         }
     }

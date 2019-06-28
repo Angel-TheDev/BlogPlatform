@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BlogPlatform.Controllers
 {
-    public class TagController : Controller
+    public class PostController : Controller
     {
         public IActionResult Index()
         {

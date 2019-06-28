@@ -8,14 +8,21 @@ namespace BlogPlatform.Repositories
 {
     public class CategoryRepository : IRepository<Category>
     {
+        private BlogContext db;
+
+        public CategoryRepository(BlogContext db)
+        {
+            this.db = db;
+        }
+
         public IEnumerable<Category> GetAll()
         {
-            throw new NotImplementedException();
+            return db.Categories.ToList();
         }
 
         public Category GetById(int id)
         {
-            throw new NotImplementedException();
+            return db.Categories.Single(c => c.Id == id);
         }
     }
 }
