@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlogPlatform.Repositories
 {
-    public class BlogContext
+    public class BlogContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
