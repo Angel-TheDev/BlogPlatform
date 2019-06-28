@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BlogPlatform.Model;
-using BlogPlatform.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using BlogPlatform.Model;
+using BlogPlatform.Repositories;
 
 namespace BlogPlatform
 {
@@ -18,7 +18,7 @@ namespace BlogPlatform
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<BlogPlatform>();
+            services.AddDbContext<BlogContext>();
             services.AddScoped<IRepository<Category>, CategoryRepository>();
             services.AddScoped<IRepository<Tag>, TagRepository>();
             services.AddScoped<IRepository<Post>, PostRepository>();

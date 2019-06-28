@@ -5,13 +5,11 @@ using System.Threading.Tasks;
 
 namespace BlogPlatform.Model
 {
-    public class Tag
+    public class TagPosts
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-
+        public virtual int TagId { get; set; }
+        public virtual Tag tag { get; set; }
+        public virtual int PostId { get; set; }
         public virtual Post post { get; set; }
-        public virtual List<TagPosts> TagPosts { get; set; }
-
     }
 }

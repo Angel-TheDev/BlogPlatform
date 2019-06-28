@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace BlogPlatform.Model
 {
-    public class Category
+    public class Category 
     {
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public virtual Post post { get; set; }
+        public virtual List<Post> PostsList { get; set; }
     }
 }

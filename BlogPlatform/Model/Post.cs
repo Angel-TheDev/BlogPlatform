@@ -12,8 +12,10 @@ namespace BlogPlatform.Model
         public string Body { get; set; }
         public string Author { get; set; }
         public DateTime PostDate { get; set; }
+        public virtual List<TagPosts> TagPosts { get; set; }
+
 
         public virtual Category category { get; set; }
-        public virtual Tag tag { get; set; }
+        public virtual int CategoryId { get; set; }
     }
 }
