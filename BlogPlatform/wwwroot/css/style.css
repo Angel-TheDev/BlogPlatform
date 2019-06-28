@@ -1,0 +1,25 @@
+﻿footer{
+    font-synthesis: weight;
+    font-size: 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    padding-top: 1.5em;
+    min-height: 2em;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+    list-style: none;
+}
+body{
+    background-color: darksalmon;
+
+}
+
