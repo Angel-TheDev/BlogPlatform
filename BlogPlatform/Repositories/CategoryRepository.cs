@@ -24,5 +24,10 @@ namespace BlogPlatform.Repositories
         {
             return db.Categories.Single(c => c.Id == id);
         }
+
+        public IEnumerable<Category> GetByTagId(int ID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

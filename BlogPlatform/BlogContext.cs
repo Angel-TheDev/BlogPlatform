@@ -66,6 +66,7 @@ namespace BlogPlatform.Repositories
             modelBuilder.Entity<TagPosts>().HasData(
                 new TagPosts
                 {
+                    Id = 1,
                     TagId = 1,
                     PostId = 1
                 });

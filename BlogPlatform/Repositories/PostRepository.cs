@@ -17,5 +17,10 @@ namespace BlogPlatform.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<Post> GetByTagId(int ID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

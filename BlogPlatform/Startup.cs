@@ -22,6 +22,7 @@ namespace BlogPlatform
             services.AddScoped<IRepository<Category>, CategoryRepository>();
             services.AddScoped<IRepository<Tag>, TagRepository>();
             services.AddScoped<IRepository<Post>, PostRepository>();
+            services.AddScoped<IRepository<TagPosts>, TagPostsRepository>();
 
         }
 
