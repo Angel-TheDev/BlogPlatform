@@ -1,7 +1,11 @@
-﻿
+﻿@model IEnumerable<BlogPlatform.Model.Category>
 @{
     ViewData["Title"] = "Index";
 }
 
 <h2>Index</h2>
 
+@foreach (var cat in Model)
+{
+    @cat.Name
+}

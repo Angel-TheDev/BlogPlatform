@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BlogPlatform.Migrations
 {
-    public partial class FirstMigration : Migration
+    public partial class Seedlings : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,7 +30,7 @@ namespace BlogPlatform.Migrations
                     Title = table.Column<string>(nullable: true),
                     Body = table.Column<string>(nullable: true),
                     Author = table.Column<string>(nullable: true),
-                    PostDate = table.Column<DateTime>(nullable: false),
+                    Date = table.Column<DateTime>(nullable: false),
                     CategoryId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -92,6 +92,21 @@ namespace BlogPlatform.Migrations
                 table: "Categories",
                 columns: new[] { "Id", "Name" },
                 values: new object[] { 1, "Coding" });
+
+            migrationBuilder.InsertData(
+                table: "Tags",
+                columns: new[] { "Id", "Name", "postId" },
+                values: new object[] { 1, "Education", null });
+
+            migrationBuilder.InsertData(
+                table: "Posts",
+                columns: new[] { "Id", "Author", "Body", "CategoryId", "Date", "Title" },
+                values: new object[] { 1, "Matt V", "Lorem Ipsum", 1, new DateTime(2019, 6, 28, 20, 28, 0, 610, DateTimeKind.Local), "Coding Bootcamps" });
+
+            migrationBuilder.InsertData(
+                table: "TagPostsdb",
+                columns: new[] { "TagId", "PostId" },
+                values: new object[] { 1, 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Posts_CategoryId",

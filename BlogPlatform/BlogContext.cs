@@ -45,6 +45,31 @@ namespace BlogPlatform.Repositories
                .WithMany(s => s.TagPosts)
                .HasForeignKey(tp => tp.PostId);
 
+            modelBuilder.Entity<Post>().HasData(
+                new Post
+                {
+                    Id = 1,
+                    Title = "Coding Bootcamps",
+                    Body = "Lorem Ipsum",
+                    Author = "Matt V",
+                    Date = DateTime.Now,
+                    CategoryId = 1
+                });
+
+            modelBuilder.Entity<Tag>().HasData(
+                new Tag
+                {
+                    Id = 1,
+                    Name = "Education"
+                });
+
+            modelBuilder.Entity<TagPosts>().HasData(
+                new TagPosts
+                {
+                    TagId = 1,
+                    PostId = 1
+                });
+
 
 
 

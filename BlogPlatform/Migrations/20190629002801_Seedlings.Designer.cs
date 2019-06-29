@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20190628174251_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20190629002801_Seedlings")]
+    partial class Seedlings
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,7 +50,7 @@ namespace BlogPlatform.Migrations
 
                     b.Property<int>("CategoryId");
 
-                    b.Property<DateTime>("PostDate");
+                    b.Property<DateTime>("Date");
 
                     b.Property<string>("Title");
 
@@ -59,6 +59,10 @@ namespace BlogPlatform.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Posts");
+
+                    b.HasData(
+                        new { Id = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 28, 20, 28, 0, 610, DateTimeKind.Local), Title = "Coding Bootcamps" }
+                    );
                 });
 
             modelBuilder.Entity("BlogPlatform.Model.Tag", b =>
@@ -76,6 +80,10 @@ namespace BlogPlatform.Migrations
                     b.HasIndex("postId");
 
                     b.ToTable("Tags");
+
+                    b.HasData(
+                        new { Id = 1, Name = "Education" }
+                    );
                 });
 
             modelBuilder.Entity("BlogPlatform.Model.TagPosts", b =>
@@ -89,6 +97,10 @@ namespace BlogPlatform.Migrations
                     b.HasIndex("PostId");
 
                     b.ToTable("TagPostsdb");
+
+                    b.HasData(
+                        new { TagId = 1, PostId = 1 }
+                    );
                 });
 
             modelBuilder.Entity("BlogPlatform.Model.Post", b =>
