@@ -8,28 +8,34 @@
     <meta name="viewport" content="width=device-width" />
     <title>Home Page</title>
 </head>
-<nav role="navigation">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li>
-            <a href="#">Categories</a>
-            <ul class="dropdown">
-                <li><a href="/Category/Index/">Cars</a></li>
-                <li><a href="#">Software Development</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Tags</a>
-            <ul class="dropdown">
-                <li><a href="#">Sub-1</a></li>
-                <li><a href="#">Sub-2</a></li>
-                <li><a href="#">Sub-3</a></li>
-                <li><a href="#">Sub-4</a></li>
-            </ul>
-        </li>
 
-        </ul>
-</nav>
 <body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#home">Create</a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Blogs
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">All Blogs</a>
+                <a href="#">Software</a>
+                <a href="#">Cars</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Tags
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">C#</a>
+                <a href="#">Education</a>
+                <a href="#">Ford</a>
+            </div>
+        </div>
+    </div>
     @RenderBody()
 </body>
 <footer>
