@@ -30,8 +30,15 @@ namespace BlogPlatform.Repositories
                 new Category
                 {
                     Id = 1,
-                    Name = "Coding"
-                });
+                    Name = "Software Development"
+                },
+
+                new Category
+                {
+                    Id = 1,
+                    Name = "Cars"
+                }
+                );
 
             modelBuilder.Entity<TagPosts>().HasKey(tp => new { tp.TagId, tp.PostId });
 

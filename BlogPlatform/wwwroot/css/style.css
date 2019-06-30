@@ -1,27 +1,27 @@
-﻿footer {
+﻿
+footer {
+    /*font-synthesis: weight;
+    font-size: 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    padding-top: 1.5em;
+    min-height: 2em;
     width: 100%;
-    color: black;
-    text-align: center;
+    text-align: center;*/
+
+    background-color: black;
 }
 
-ul {
-    list-style: none;
-}
 
-li {
-    list-style: none;
-}
 
 body {
     background-color: goldenrod;
 }
 
-nav a:hover {
-    background: white;
-}
-
-nav a {
-    padding: 1em .5em;
-    color: black;
-    text-decoration: none;
+header h1 {
+    font-size: 4em;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
 }

@@ -11,10 +11,26 @@
     <meta name="viewport" content="width=device-width" />
     <title>Home Page</title>
 </head>
-<nav>
-    <a href="#"><b>Home</b></a>
-    <a href="#Categories"><b>Categories</b></a>
-    <a href="#Tags"><b>Tags</b></a>
+<nav role="navigation">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">Categories</a>
+            <ul class="dropdown">
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">Software Development</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Tags</a>
+            <ul class="dropdown">
+                <li><a href="#">Sub-1</a></li>
+                <li><a href="#">Sub-2</a></li>
+                <li><a href="#">Sub-3</a></li>
+                <li><a href="#">Sub-4/a></li>
+            </ul>
+        </li>
+
+        </ul>
 </nav>
 
 
