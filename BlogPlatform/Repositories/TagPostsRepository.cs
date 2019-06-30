@@ -27,7 +27,7 @@ namespace BlogPlatform.Repositories
 
         public TagPosts GetById(int id)
         {
-            throw new NotImplementedException();
+            return db.TagPostsdb.Single(c => c.PostId == id);
         }
 
     }

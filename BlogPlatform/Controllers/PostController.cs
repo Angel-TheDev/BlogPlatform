@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using BlogPlatform.Model;
+using BlogPlatform.Repositories;
 
 namespace BlogPlatform.Controllers
 {
     public class PostController : Controller
     {
-        public IActionResult Index()
+        IRepository<Post> postRepo;
+
+        public PostController(IRepository<Post> postRepo)
         {
-            return View();
+            this.postRepo = postRepo;
+        }
+
+        public ViewResult Details(int id)
+        {
+            var model = postRepo.GetByTagId(id);
+            return View(model);
         }
     }
 }

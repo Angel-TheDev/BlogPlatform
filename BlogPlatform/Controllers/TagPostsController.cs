@@ -17,15 +17,21 @@ namespace BlogPlatform.Controllers
             this.tagRepo = tagRepo;
         }
 
-        public ViewResult Index()
+        //public ViewResult Index()
+        //{
+        //    var model = tagRepo.GetAll();
+        //    return View(model);
+        //}
+
+        public ViewResult Index(int id)
         {
-            var model = tagRepo.GetAll();
+            var model = tagRepo.GetByTagId(id);
             return View(model);
         }
 
         public ViewResult Details(int id)
         {
-            var model = tagRepo.GetByTagId(id);
+            var model = tagRepo.GetById(id);
             return View(model);
         }
 

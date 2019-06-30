@@ -1,18 +1,12 @@
-﻿@model IEnumerable<BlogPlatform.Model.TagPosts>
+﻿@model BlogPlatform.Model.TagPosts
 @{
     ViewData["Title"] = "Details";
-    Layout = "_layout";
+    Layout = null;`
 }
 
-@foreach (var tp in Model)
-{
-@tp.Id
-@tp.PostId
-@tp.TagId
-@tp.post.Author
-@tp.post.Body
-@tp.post.category
-@tp.post.Date
-@tp.tag.Name
-}
 
+
+@Model.Id
+@Model.post.Title
+@Model.TagId
+@Model.tag.Name

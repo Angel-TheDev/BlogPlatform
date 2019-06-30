@@ -1,7 +1,19 @@
 ﻿
+<h2>Details</h2>
+
+@model IEnumerable<BlogPlatform.Model.Post>
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detail";
+    Layout = null;
 }
 
-<h2>Details</h2>
+<h2>Detail</h2>
+
+@foreach (var cat in Model)
+{
+    <p>@cat.Title</p>
+    <p>@cat.Author</p>
+    <p>@cat.Date</p>
+    <p><a href="/TagPosts/Details/@cat.Id">TestLink</a></p>
+}
 

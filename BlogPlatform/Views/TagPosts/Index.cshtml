@@ -1,8 +1,14 @@
-﻿
+﻿@model IEnumerable<BlogPlatform.Model.TagPosts>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Details";
     Layout = "_layout";
 }
 
-<h2>Index</h2>
+@foreach (var tp in Model)
+{
+    @tp.post.Title
+    @tp.post.Author
+    @tp.post.Date
+ 
+}
 

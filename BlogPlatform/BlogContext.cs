@@ -78,6 +78,57 @@ namespace BlogPlatform.Repositories
                     PostId = 1
                 });
 
+            modelBuilder.Entity<Post>().HasData(
+                new Post
+                {
+                    Id = 2,
+                    Title = "Visual Studio",
+                    Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+                    Author = "Angel",
+                    Date = DateTime.Now,
+                    CategoryId = 1
+                });
+
+            modelBuilder.Entity<Tag>().HasData(
+                new Tag
+                {
+                    Id = 2,
+                    Name = "C#"
+                });
+
+            modelBuilder.Entity<TagPosts>().HasData(
+                new TagPosts
+                {
+                    Id = 2,
+                    TagId = 2,
+                    PostId = 2
+                });
+            modelBuilder.Entity<Post>().HasData(
+                new Post
+                {
+                    Id = 3,
+                    Title = "Ford Mustang",
+                    Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+                    Author = "Carla",
+                    Date = DateTime.Now,
+                    CategoryId = 2
+                });
+
+            modelBuilder.Entity<Tag>().HasData(
+                new Tag
+                {
+                    Id = 3,
+                    Name = "Ford"
+                });
+
+            modelBuilder.Entity<TagPosts>().HasData(
+                new TagPosts
+                {
+                    Id = 3,
+                    TagId = 3,
+                    PostId = 3
+                });
+
 
 
 

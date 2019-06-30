@@ -1,7 +1,14 @@
-﻿
+﻿@model IEnumerable<BlogPlatform.Model.Post>
 @{
     ViewData["Title"] = "Detail";
 }
 
 <h2>Detail</h2>
+
+@foreach (var cat in Model)
+{
+<p>@cat.Title</p>
+<p>@cat.Author</p>
+<p>@cat.Date</p>
+}
 

@@ -8,6 +8,13 @@ namespace BlogPlatform.Repositories
 {
     public class PostRepository : IRepository<Post>
     {
+        private BlogContext db;
+
+        public PostRepository(BlogContext db)
+        {
+            this.db = db;
+        }
+
         public IEnumerable<Post> GetAll()
         {
             throw new NotImplementedException();
@@ -20,7 +27,8 @@ namespace BlogPlatform.Repositories
 
         public IEnumerable<Post> GetByTagId(int ID)
         {
-            throw new NotImplementedException();
+            return db.Posts.Where(c => c.CategoryId == ID);
+
         }
     }
-}
+    }
