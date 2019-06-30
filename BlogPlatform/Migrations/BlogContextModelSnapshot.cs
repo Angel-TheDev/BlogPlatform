@@ -15,7 +15,7 @@ namespace BlogPlatform.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.11-servicing-32099")
+                .HasAnnotation("ProductVersion", "2.1.8-servicing-32085")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -32,8 +32,7 @@ namespace BlogPlatform.Migrations
                     b.ToTable("Categories");
 
                     b.HasData(
-                        new { Id = 1, Name = "Software Development" },
-                        new { Id = 2, Name = "Cars" }
+                        new { Id = 1, Name = "Coding" }
                     );
                 });
 
@@ -60,7 +59,7 @@ namespace BlogPlatform.Migrations
                     b.ToTable("Posts");
 
                     b.HasData(
-                        new { Id = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 29, 23, 53, 43, 378, DateTimeKind.Local), Title = "Coding Bootcamps" }
+                        new { Id = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 28, 20, 38, 45, 857, DateTimeKind.Local), Title = "Coding Bootcamps" }
                     );
                 });
 
