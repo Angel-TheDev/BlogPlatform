@@ -35,7 +35,7 @@ namespace BlogPlatform.Repositories
 
                 new Category
                 {
-                    Id = 1,
+                    Id = 2,
                     Name = "Cars"
                 }
                 );

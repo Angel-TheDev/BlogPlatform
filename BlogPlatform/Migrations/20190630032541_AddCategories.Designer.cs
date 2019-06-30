@@ -4,14 +4,16 @@ using BlogPlatform.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20190630032541_AddCategories")]
+    partial class AddCategories
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,8 +31,7 @@ namespace BlogPlatform.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("
-                        ");
+                    b.ToTable("Categories");
 
                     b.HasData(
                         new { Id = 1, Name = "Software Development" },
