@@ -15,6 +15,11 @@ namespace BlogPlatform.Repositories
             this.db = db;
         }
 
+        public void Delete(Category obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Category> GetAll()
         {
             return db.Categories.ToList();

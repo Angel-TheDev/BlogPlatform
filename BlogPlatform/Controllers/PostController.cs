@@ -28,5 +28,21 @@ namespace BlogPlatform.Controllers
             var model = postRepo.GetAll();
             return View(model);
         }
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            var model = postRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Post post)
+        {
+            int rbid = post.Id;
+            postRepo.Delete(post);
+
+            return RedirectToAction("AllBlogs");
+        }
     }
 }

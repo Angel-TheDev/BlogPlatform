@@ -30,5 +30,9 @@ namespace BlogPlatform.Repositories
             return db.TagPostsdb.Single(c => c.PostId == id);
         }
 
+        public void Delete(TagPosts obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

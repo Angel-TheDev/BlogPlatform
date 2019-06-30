@@ -22,13 +22,18 @@ namespace BlogPlatform.Repositories
 
         public Post GetById(int id)
         {
-            throw new NotImplementedException();
+            return db.Posts.Single(c => c.Id == id);
         }
 
         public IEnumerable<Post> GetByTagId(int ID)
         {
             return db.Posts.Where(c => c.CategoryId == ID);
 
+        }
+        public void Delete(Post post)
+        {
+            db.Posts.Remove(post);
+            db.SaveChanges();
         }
     }
     }

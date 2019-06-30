@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BlogPlatform.Migrations
 {
-    public partial class MIGRATION : Migration
+    public partial class M2Test : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -111,32 +111,24 @@ namespace BlogPlatform.Migrations
             migrationBuilder.InsertData(
                 table: "Posts",
                 columns: new[] { "Id", "Author", "Body", "CategoryId", "Date", "Title" },
-                values: new object[] { 1, "Matt V", "Lorem Ipsum", 1, new DateTime(2019, 6, 30, 15, 1, 6, 887, DateTimeKind.Local), "Coding Bootcamps" });
-
-            migrationBuilder.InsertData(
-                table: "Posts",
-                columns: new[] { "Id", "Author", "Body", "CategoryId", "Date", "Title" },
-                values: new object[] { 2, "Angel", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 1, new DateTime(2019, 6, 30, 15, 1, 6, 890, DateTimeKind.Local), "Visual Studio" });
-
-            migrationBuilder.InsertData(
-                table: "Posts",
-                columns: new[] { "Id", "Author", "Body", "CategoryId", "Date", "Title" },
-                values: new object[] { 3, "Carla", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 6, 30, 15, 1, 6, 890, DateTimeKind.Local), "Ford Mustang" });
+                values: new object[,]
+                {
+                    { 1, "Matt V", "Lorem Ipsum", 1, new DateTime(2019, 6, 30, 16, 13, 8, 585, DateTimeKind.Local), "Coding Bootcamps" },
+                    { 2, "Angel", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 1, new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), "Visual Studio" },
+                    { 3, "Carla", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), "Ford Mustang" },
+                    { 4, "Sally", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), "Ford GT" }
+                });
 
             migrationBuilder.InsertData(
                 table: "TagPostsdb",
                 columns: new[] { "TagId", "PostId", "Id" },
-                values: new object[] { 1, 1, 1 });
-
-            migrationBuilder.InsertData(
-                table: "TagPostsdb",
-                columns: new[] { "TagId", "PostId", "Id" },
-                values: new object[] { 2, 2, 2 });
-
-            migrationBuilder.InsertData(
-                table: "TagPostsdb",
-                columns: new[] { "TagId", "PostId", "Id" },
-                values: new object[] { 3, 3, 3 });
+                values: new object[,]
+                {
+                    { 1, 1, 1 },
+                    { 2, 2, 2 },
+                    { 3, 3, 3 },
+                    { 3, 4, 4 }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Posts_CategoryId",

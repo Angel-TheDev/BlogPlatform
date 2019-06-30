@@ -15,6 +15,11 @@ namespace BlogPlatform.Repositories
             this.db = db;
         }
 
+        public void Delete(Tag obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Tag> GetAll()
         {
             throw new NotImplementedException();

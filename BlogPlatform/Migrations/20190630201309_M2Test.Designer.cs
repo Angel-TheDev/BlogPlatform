@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20190630190107_MIGRATION")]
-    partial class MIGRATION
+    [Migration("20190630201309_M2Test")]
+    partial class M2Test
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -62,9 +62,10 @@ namespace BlogPlatform.Migrations
                     b.ToTable("Posts");
 
                     b.HasData(
-                        new { Id = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 15, 1, 6, 887, DateTimeKind.Local), Title = "Coding Bootcamps" },
-                        new { Id = 2, Author = "Angel", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 15, 1, 6, 890, DateTimeKind.Local), Title = "Visual Studio" },
-                        new { Id = 3, Author = "Carla", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 6, 30, 15, 1, 6, 890, DateTimeKind.Local), Title = "Ford Mustang" }
+                        new { Id = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 16, 13, 8, 585, DateTimeKind.Local), Title = "Coding Bootcamps" },
+                        new { Id = 2, Author = "Angel", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), Title = "Visual Studio" },
+                        new { Id = 3, Author = "Carla", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), Title = "Ford Mustang" },
+                        new { Id = 4, Author = "Sally", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), Title = "Ford GT" }
                     );
                 });
 
@@ -108,7 +109,8 @@ namespace BlogPlatform.Migrations
                     b.HasData(
                         new { TagId = 1, PostId = 1, Id = 1 },
                         new { TagId = 2, PostId = 2, Id = 2 },
-                        new { TagId = 3, PostId = 3, Id = 3 }
+                        new { TagId = 3, PostId = 3, Id = 3 },
+                        new { TagId = 3, PostId = 4, Id = 4 }
                     );
                 });
 
