@@ -129,6 +129,25 @@ namespace BlogPlatform.Repositories
                     PostId = 3
                 });
 
+            modelBuilder.Entity<Post>().HasData(
+                new Post
+                {
+                    Id = 4,
+                    Title = "Ford GT",
+                    Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+                    Author = "Sally",
+                    Date = DateTime.Now,
+                    CategoryId = 2
+                });
+
+            modelBuilder.Entity<TagPosts>().HasData(
+                new TagPosts
+                {
+                    Id = 4,
+                    TagId = 3,
+                    PostId = 4
+                });
+
 
 
 
