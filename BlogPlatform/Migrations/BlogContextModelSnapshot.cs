@@ -32,7 +32,8 @@ namespace BlogPlatform.Migrations
                     b.ToTable("Categories");
 
                     b.HasData(
-                        new { Id = 1, Name = "Coding" }
+                        new { Id = 1, Name = "Software Development" },
+                        new { Id = 2, Name = "Cars" }
                     );
                 });
 
@@ -59,7 +60,9 @@ namespace BlogPlatform.Migrations
                     b.ToTable("Posts");
 
                     b.HasData(
-                        new { Id = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 28, 20, 38, 45, 857, DateTimeKind.Local), Title = "Coding Bootcamps" }
+                        new { Id = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 15, 1, 6, 887, DateTimeKind.Local), Title = "Coding Bootcamps" },
+                        new { Id = 2, Author = "Angel", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 15, 1, 6, 890, DateTimeKind.Local), Title = "Visual Studio" },
+                        new { Id = 3, Author = "Carla", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 6, 30, 15, 1, 6, 890, DateTimeKind.Local), Title = "Ford Mustang" }
                     );
                 });
 
@@ -80,7 +83,9 @@ namespace BlogPlatform.Migrations
                     b.ToTable("Tags");
 
                     b.HasData(
-                        new { Id = 1, Name = "Education" }
+                        new { Id = 1, Name = "Education" },
+                        new { Id = 2, Name = "C#" },
+                        new { Id = 3, Name = "Ford" }
                     );
                 });
 
@@ -99,7 +104,9 @@ namespace BlogPlatform.Migrations
                     b.ToTable("TagPostsdb");
 
                     b.HasData(
-                        new { TagId = 1, PostId = 1, Id = 1 }
+                        new { TagId = 1, PostId = 1, Id = 1 },
+                        new { TagId = 2, PostId = 2, Id = 2 },
+                        new { TagId = 3, PostId = 3, Id = 3 }
                     );
                 });
 

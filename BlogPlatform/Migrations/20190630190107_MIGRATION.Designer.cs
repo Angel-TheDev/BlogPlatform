@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20190629002801_Seedlings")]
-    partial class Seedlings
+    [Migration("20190630190107_MIGRATION")]
+    partial class MIGRATION
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,7 +34,8 @@ namespace BlogPlatform.Migrations
                     b.ToTable("Categories");
 
                     b.HasData(
-                        new { Id = 1, Name = "Coding" }
+                        new { Id = 1, Name = "Software Development" },
+                        new { Id = 2, Name = "Cars" }
                     );
                 });
 
@@ -61,7 +62,9 @@ namespace BlogPlatform.Migrations
                     b.ToTable("Posts");
 
                     b.HasData(
-                        new { Id = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 28, 20, 28, 0, 610, DateTimeKind.Local), Title = "Coding Bootcamps" }
+                        new { Id = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 15, 1, 6, 887, DateTimeKind.Local), Title = "Coding Bootcamps" },
+                        new { Id = 2, Author = "Angel", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 15, 1, 6, 890, DateTimeKind.Local), Title = "Visual Studio" },
+                        new { Id = 3, Author = "Carla", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 6, 30, 15, 1, 6, 890, DateTimeKind.Local), Title = "Ford Mustang" }
                     );
                 });
 
@@ -82,7 +85,9 @@ namespace BlogPlatform.Migrations
                     b.ToTable("Tags");
 
                     b.HasData(
-                        new { Id = 1, Name = "Education" }
+                        new { Id = 1, Name = "Education" },
+                        new { Id = 2, Name = "C#" },
+                        new { Id = 3, Name = "Ford" }
                     );
                 });
 
@@ -92,6 +97,8 @@ namespace BlogPlatform.Migrations
 
                     b.Property<int>("PostId");
 
+                    b.Property<int>("Id");
+
                     b.HasKey("TagId", "PostId");
 
                     b.HasIndex("PostId");
@@ -99,7 +106,9 @@ namespace BlogPlatform.Migrations
                     b.ToTable("TagPostsdb");
 
                     b.HasData(
-                        new { TagId = 1, PostId = 1 }
+                        new { TagId = 1, PostId = 1, Id = 1 },
+                        new { TagId = 2, PostId = 2, Id = 2 },
+                        new { TagId = 3, PostId = 3, Id = 3 }
                     );
                 });
 

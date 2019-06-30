@@ -22,5 +22,11 @@ namespace BlogPlatform.Controllers
             var model = postRepo.GetByTagId(id);
             return View(model);
         }
+
+        public ViewResult AllBlogs()
+        {
+            var model = postRepo.GetAll();
+            return View(model);
+        }
     }
 }

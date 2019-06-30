@@ -1,12 +1,17 @@
 ﻿@model BlogPlatform.Model.TagPosts
 @{
     ViewData["Title"] = "Details";
-    Layout = null;`
+    Layout = null;
 }
 
-
-
-@Model.Id
-@Model.post.Title
-@Model.TagId
-@Model.tag.Name
+<h2>
+    <p>@Model.post.Title</p>
+</h2>
+<hr />
+<p>@Model.post.Author</p>
+<p>@Model.post.Date</p>
+<hr />
+<p>@Model.post.Body</p>
+<hr />
+<p>Tags:</p>
+<p>@Model.tag</p>

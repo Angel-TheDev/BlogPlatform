@@ -5,15 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20190630032541_AddCategories.cs" />
-    <Compile Remove="Migrations\20190630032541_AddCategories.Designer.cs" />
-    <Compile Remove="Migrations\20190630035343_ReAddCategories.cs" />
-    <Compile Remove="Migrations\20190630035343_ReAddCategories.Designer.cs" />
-    <Compile Remove="Migrations\20190630152402_AddCategoryData.cs" />
-    <Compile Remove="Migrations\20190630152402_AddCategoryData.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 

@@ -17,7 +17,7 @@ namespace BlogPlatform.Repositories
 
         public IEnumerable<Post> GetAll()
         {
-            throw new NotImplementedException();
+            return db.Posts.ToList();
         }
 
         public Post GetById(int id)

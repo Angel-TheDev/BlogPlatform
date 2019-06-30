@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BlogPlatform.Migrations
 {
-    public partial class Seedlings : Migration
+    public partial class MIGRATION : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -68,6 +68,7 @@ namespace BlogPlatform.Migrations
                 name: "TagPostsdb",
                 columns: table => new
                 {
+                    Id = table.Column<int>(nullable: false),
                     TagId = table.Column<int>(nullable: false),
                     PostId = table.Column<int>(nullable: false)
                 },
@@ -91,22 +92,51 @@ namespace BlogPlatform.Migrations
             migrationBuilder.InsertData(
                 table: "Categories",
                 columns: new[] { "Id", "Name" },
-                values: new object[] { 1, "Coding" });
+                values: new object[,]
+                {
+                    { 1, "Software Development" },
+                    { 2, "Cars" }
+                });
 
             migrationBuilder.InsertData(
                 table: "Tags",
                 columns: new[] { "Id", "Name", "postId" },
-                values: new object[] { 1, "Education", null });
+                values: new object[,]
+                {
+                    { 1, "Education", null },
+                    { 2, "C#", null },
+                    { 3, "Ford", null }
+                });
 
             migrationBuilder.InsertData(
                 table: "Posts",
                 columns: new[] { "Id", "Author", "Body", "CategoryId", "Date", "Title" },
-                values: new object[] { 1, "Matt V", "Lorem Ipsum", 1, new DateTime(2019, 6, 28, 20, 28, 0, 610, DateTimeKind.Local), "Coding Bootcamps" });
+                values: new object[] { 1, "Matt V", "Lorem Ipsum", 1, new DateTime(2019, 6, 30, 15, 1, 6, 887, DateTimeKind.Local), "Coding Bootcamps" });
+
+            migrationBuilder.InsertData(
+                table: "Posts",
+                columns: new[] { "Id", "Author", "Body", "CategoryId", "Date", "Title" },
+                values: new object[] { 2, "Angel", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 1, new DateTime(2019, 6, 30, 15, 1, 6, 890, DateTimeKind.Local), "Visual Studio" });
+
+            migrationBuilder.InsertData(
+                table: "Posts",
+                columns: new[] { "Id", "Author", "Body", "CategoryId", "Date", "Title" },
+                values: new object[] { 3, "Carla", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 6, 30, 15, 1, 6, 890, DateTimeKind.Local), "Ford Mustang" });
 
             migrationBuilder.InsertData(
                 table: "TagPostsdb",
-                columns: new[] { "TagId", "PostId" },
-                values: new object[] { 1, 1 });
+                columns: new[] { "TagId", "PostId", "Id" },
+                values: new object[] { 1, 1, 1 });
+
+            migrationBuilder.InsertData(
+                table: "TagPostsdb",
+                columns: new[] { "TagId", "PostId", "Id" },
+                values: new object[] { 2, 2, 2 });
+
+            migrationBuilder.InsertData(
+                table: "TagPostsdb",
+                columns: new[] { "TagId", "PostId", "Id" },
+                values: new object[] { 3, 3, 3 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Posts_CategoryId",
