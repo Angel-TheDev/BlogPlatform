@@ -1,5 +1,7 @@
-﻿@model IEnumerable<BlogPlatform.Model.Post>
+﻿@model BlogPlatform.Model.Post
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
 @{
     Layout = "_layout";
 }
@@ -7,25 +9,39 @@
 <!DOCTYPE html>
 
 <html>
-<h2>Post</h2>
-<ul>
-@foreach (var Post in Model)
-{
-    <h2>
-        <li>@Post.Title</li>
+<body>
+    @*<section>
+        <ul>
+            @foreach (var Post in Model)
+            {
+                <h3><li>@Post.Title</li></h3>
+                <hr />
+                <li>
+                    @Post.Author
+                </li>
+                <li>@Post.Date</li>
+                <hr />
+                <li>@Post.Body</li>
+                <hr />
+                <a href="~/Post/Edit/@Post.PostId">Edit</a>
+                <a href="~/Post/Delete/@Post.PostId">Delete</a>
+                <li>Tags:</li>
+                @*<p>@Model.tag</p>*@
+    @*}
+            </ul>
+        </section>*@*
+
+    <p>@Model.Title</p>
     </h2>
     <hr />
-    <li>
-        @Post.Author</li>
-    <li>@Post.Date</li>
+    <p>@Model.Author</p>
+    <p>@Model.Date</p>
     <hr />
-    <li>@Post.Body</li>
+    <p>@Model.Body</p>
     <hr />
-    <a href="~/Post/Edit/@Post.PostId">Edit</a>
-    <a href="~/Post/Delete/@Post.PostId">Delete</a>
-    <li>Tags:</li>
-    @*<p>@Model.tag</p>*@
-}
-</ul>
-
+    <a href="~/Post/Edit/@Model.PostId">Edit</a>
+    <a href="~/post/delete/@Model.PostId">Delete</a>
+    <p>Tags:</p>
+    @*<p>@Model.tag</p>*@*
+</body>
 </html>

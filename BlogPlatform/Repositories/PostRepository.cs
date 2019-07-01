@@ -20,9 +20,9 @@ namespace BlogPlatform.Repositories
             return db.Posts.ToList();
         }
 
-        public Post GetById(int id)
+        public Post GetById(int Postid)
         {
-            return db.Posts.Single(c => c.PostId == id);
+            return db.Posts.Single(c => c.PostId == Postid);
         }
 
         public IEnumerable<Post> GetByTagId(int ID)
