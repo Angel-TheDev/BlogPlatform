@@ -16,5 +16,6 @@ namespace BlogPlatform.Repositories
         Post GetByLast();
         void Create(TagPosts tagpost);
         IEnumerable<Tag> GetAllTags();
+        void Edit(T obj);
     }
 }

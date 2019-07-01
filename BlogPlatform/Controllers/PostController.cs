@@ -58,5 +58,24 @@ namespace BlogPlatform.Controllers
             postRepo.Create(post);
             return Redirect("~/TagPosts/Create");
         }
+
+        [HttpGet]
+        public ViewResult Edit(int id)
+        {
+            ViewBag.PostId = id;
+
+            var model = postRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Post post)
+        {
+            ViewBag.CategoryId = post.CategoryId;
+            int rbid = post.PostId;
+            postRepo.Edit(post);
+
+            return RedirectToAction("AllBlogs");
+        }
     }
 }

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20190701043928_TestM4")]
-    partial class TestM4
+    [Migration("20190701131938_Testm5")]
+    partial class Testm5
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,19 +23,19 @@ namespace BlogPlatform.Migrations
 
             modelBuilder.Entity("BlogPlatform.Model.Category", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name");
 
-                    b.HasKey("Id");
+                    b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
 
                     b.HasData(
-                        new { Id = 1, Name = "Software Development" },
-                        new { Id = 2, Name = "Cars" }
+                        new { CategoryId = 1, Name = "Software Development" },
+                        new { CategoryId = 2, Name = "Cars" }
                     );
                 });
 
@@ -62,10 +62,10 @@ namespace BlogPlatform.Migrations
                     b.ToTable("Posts");
 
                     b.HasData(
-                        new { PostId = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 7, 1, 0, 39, 27, 892, DateTimeKind.Local), Title = "Coding Bootcamps" },
-                        new { PostId = 2, Author = "Angel", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 7, 1, 0, 39, 27, 894, DateTimeKind.Local), Title = "Visual Studio" },
-                        new { PostId = 3, Author = "Carla", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 7, 1, 0, 39, 27, 894, DateTimeKind.Local), Title = "Ford Mustang" },
-                        new { PostId = 4, Author = "Sally", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 7, 1, 0, 39, 27, 894, DateTimeKind.Local), Title = "Ford GT" }
+                        new { PostId = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 7, 1, 9, 19, 37, 594, DateTimeKind.Local), Title = "Coding Bootcamps" },
+                        new { PostId = 2, Author = "Angel", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 7, 1, 9, 19, 37, 597, DateTimeKind.Local), Title = "Visual Studio" },
+                        new { PostId = 3, Author = "Carla", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 7, 1, 9, 19, 37, 597, DateTimeKind.Local), Title = "Ford Mustang" },
+                        new { PostId = 4, Author = "Sally", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 7, 1, 9, 19, 37, 597, DateTimeKind.Local), Title = "Ford GT" }
                     );
                 });
 

@@ -15,6 +15,10 @@ namespace BlogPlatform.Repositories
             this.db = db;
         }
 
+        public TagPostsRepository()
+        {
+        }
+
         public IEnumerable<TagPosts> GetAll()
         {
             return db.TagPostsdb.ToList();
@@ -56,5 +60,9 @@ namespace BlogPlatform.Repositories
             return db.Tags.ToList();
         }
 
+        public void Edit(TagPosts obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -29,13 +29,13 @@ namespace BlogPlatform.Repositories
             modelBuilder.Entity<Category>().HasData(
                 new Category
                 {
-                    Id = 1,
+                    CategoryId = 1,
                     Name = "Software Development"
                 },
 
                 new Category
                 {
-                    Id = 2,
+                    CategoryId = 2,
                     Name = "Cars"
                 }
                 );

@@ -30,6 +30,11 @@ namespace BlogPlatform.Repositories
             throw new NotImplementedException();
         }
 
+        public void Edit(Category obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Category> GetAll()
         {
             return db.Categories.ToList();
@@ -42,7 +47,7 @@ namespace BlogPlatform.Repositories
 
         public Category GetById(int id)
         {
-            return db.Categories.Single(c => c.Id == id);
+            return db.Categories.Single(c => c.CategoryId == id);
         }
 
         public Post GetByLast()
