@@ -1,0 +1,39 @@
+﻿@model BlogPlatform.Model.TagPosts
+
+@{
+    ViewData["Title"] = "Create";
+}
+@addTagHelper * ,Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>Add a tag that closest resembles your blog</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <select asp-for="TagId">
+                    <option value="1">Education</option>
+                    <option value="2">C#</option>
+                    <option value="3">Ford</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input asp-for="PostId" type="hidden" value="@ViewBag.PID" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

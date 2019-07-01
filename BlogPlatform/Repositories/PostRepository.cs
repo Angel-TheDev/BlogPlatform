@@ -15,11 +15,6 @@ namespace BlogPlatform.Repositories
             this.db = db;
         }
 
-        public IEnumerable<Post> GetAll()
-        {
-            return db.Posts.ToList();
-        }
-
         public Post GetById(int id)
         {
             return db.Posts.Single(c => c.PostId == id);
@@ -40,6 +35,31 @@ namespace BlogPlatform.Repositories
         {
             db.Posts.Add(post);
             db.SaveChanges();
+        }
+
+        public Post GetByLast()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Create(TagPosts tagpost)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Post> GetAllTags()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Post> GetAll()
+        {
+            return db.Posts.ToList();
+        }
+
+        IEnumerable<Tag> IRepository<Post>.GetAllTags()
+        {
+            throw new NotImplementedException();
         }
     }
     }

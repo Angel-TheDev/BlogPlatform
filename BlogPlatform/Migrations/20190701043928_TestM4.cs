@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BlogPlatform.Migrations
 {
-    public partial class TestM3 : Migration
+    public partial class TestM4 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -68,7 +68,7 @@ namespace BlogPlatform.Migrations
                 name: "TagPostsdb",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false),
+                    TagPostsId = table.Column<int>(nullable: false),
                     TagId = table.Column<int>(nullable: false),
                     PostId = table.Column<int>(nullable: false)
                 },
@@ -113,15 +113,15 @@ namespace BlogPlatform.Migrations
                 columns: new[] { "PostId", "Author", "Body", "CategoryId", "Date", "Title" },
                 values: new object[,]
                 {
-                    { 1, "Matt V", "Lorem Ipsum", 1, new DateTime(2019, 6, 30, 20, 43, 30, 577, DateTimeKind.Local), "Coding Bootcamps" },
-                    { 2, "Angel", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 1, new DateTime(2019, 6, 30, 20, 43, 30, 580, DateTimeKind.Local), "Visual Studio" },
-                    { 3, "Carla", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 6, 30, 20, 43, 30, 580, DateTimeKind.Local), "Ford Mustang" },
-                    { 4, "Sally", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 6, 30, 20, 43, 30, 580, DateTimeKind.Local), "Ford GT" }
+                    { 1, "Matt V", "Lorem Ipsum", 1, new DateTime(2019, 7, 1, 0, 39, 27, 892, DateTimeKind.Local), "Coding Bootcamps" },
+                    { 2, "Angel", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 1, new DateTime(2019, 7, 1, 0, 39, 27, 894, DateTimeKind.Local), "Visual Studio" },
+                    { 3, "Carla", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 7, 1, 0, 39, 27, 894, DateTimeKind.Local), "Ford Mustang" },
+                    { 4, "Sally", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 7, 1, 0, 39, 27, 894, DateTimeKind.Local), "Ford GT" }
                 });
 
             migrationBuilder.InsertData(
                 table: "TagPostsdb",
-                columns: new[] { "TagId", "PostId", "Id" },
+                columns: new[] { "TagId", "PostId", "TagPostsId" },
                 values: new object[,]
                 {
                     { 1, 1, 1 },

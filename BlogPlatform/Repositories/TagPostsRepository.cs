@@ -39,5 +39,22 @@ namespace BlogPlatform.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public Post GetByLast()
+        {
+            return db.Posts.Last();
+        }
+
+        public void Create(TagPosts tagpost)
+        {
+            db.TagPostsdb.Add(tagpost);
+            db.SaveChanges();
+        }
+
+        public IEnumerable<Tag> GetAllTags()
+        {
+            return db.Tags.ToList();
+        }
+
     }
 }

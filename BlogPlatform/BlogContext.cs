@@ -73,7 +73,7 @@ namespace BlogPlatform.Repositories
             modelBuilder.Entity<TagPosts>().HasData(
                 new TagPosts
                 {
-                    Id = 1,
+                    TagPostsId = 1,
                     TagId = 1,
                     PostId = 1
                 });
@@ -99,7 +99,7 @@ namespace BlogPlatform.Repositories
             modelBuilder.Entity<TagPosts>().HasData(
                 new TagPosts
                 {
-                    Id = 2,
+                    TagPostsId = 2,
                     TagId = 2,
                     PostId = 2
                 });
@@ -124,7 +124,7 @@ namespace BlogPlatform.Repositories
             modelBuilder.Entity<TagPosts>().HasData(
                 new TagPosts
                 {
-                    Id = 3,
+                    TagPostsId = 3,
                     TagId = 3,
                     PostId = 3
                 });
@@ -143,7 +143,7 @@ namespace BlogPlatform.Repositories
             modelBuilder.Entity<TagPosts>().HasData(
                 new TagPosts
                 {
-                    Id = 4,
+                    TagPostsId = 4,
                     TagId = 3,
                     PostId = 4
                 });

@@ -7,10 +7,10 @@ namespace BlogPlatform.Model
 {
     public class TagPosts
     {
-        public int Id { get; set; }
-        public virtual int TagId { get; set; }
+        public int TagPostsId { get; set; }
         public virtual Tag tag { get; set; }
-        public virtual int PostId { get; set; }
+        public int TagId { get; set; }
         public virtual Post post { get; set; }
+        public int PostId { get; set; }
     }
 }

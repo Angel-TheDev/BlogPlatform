@@ -56,7 +56,7 @@ namespace BlogPlatform.Controllers
         public ActionResult Create(Post post)
         {
             postRepo.Create(post);
-            return RedirectToAction("AllBlogs");
+            return Redirect("~/TagPosts/Create");
         }
     }
 }

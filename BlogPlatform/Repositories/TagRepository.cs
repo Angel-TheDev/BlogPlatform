@@ -20,6 +20,11 @@ namespace BlogPlatform.Repositories
             throw new NotImplementedException();
         }
 
+        public void Create(TagPosts tagpost)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Delete(Tag obj)
         {
             throw new NotImplementedException();
@@ -30,7 +35,17 @@ namespace BlogPlatform.Repositories
             throw new NotImplementedException();
         }
 
+        public IEnumerable<Tag> GetAllTags()
+        {
+            throw new NotImplementedException();
+        }
+
         public Tag GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Post GetByLast()
         {
             throw new NotImplementedException();
         }

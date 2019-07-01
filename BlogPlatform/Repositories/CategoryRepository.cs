@@ -20,6 +20,11 @@ namespace BlogPlatform.Repositories
             throw new NotImplementedException();
         }
 
+        public void Create(TagPosts tagpost)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Delete(Category obj)
         {
             throw new NotImplementedException();
@@ -30,9 +35,19 @@ namespace BlogPlatform.Repositories
             return db.Categories.ToList();
         }
 
+        public IEnumerable<Tag> GetAllTags()
+        {
+            throw new NotImplementedException();
+        }
+
         public Category GetById(int id)
         {
             return db.Categories.Single(c => c.Id == id);
+        }
+
+        public Post GetByLast()
+        {
+            throw new NotImplementedException();
         }
 
         public IEnumerable<Category> GetByTagId(int ID)
