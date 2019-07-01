@@ -12,7 +12,7 @@ namespace BlogPlatform.Repositories
         public DbSet<Category> Categories { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Tag> Tags { get; set; }
-        public DbSet<TagPosts> TagPostsdb { get; set; }
+        public DbSet<TagPosts> TagPosts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

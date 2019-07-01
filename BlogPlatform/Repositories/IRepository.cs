@@ -10,7 +10,7 @@ namespace BlogPlatform.Repositories
     {
         IEnumerable<T> GetAll();
         T GetById(int id);
-        IEnumerable<T> GetByTagId(int ID);
+        //IEnumerable<T> GetByTagId(int ID);
         void Delete(T obj);
         void Create(T obj);
         void Edit(T obj);

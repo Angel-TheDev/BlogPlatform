@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogPlatform.Repositories
 {
-    public class CategoryRepository /*: IRepository<Category>*/
+    public class CategoryRepository : IRepository<Category>
     {
         private BlogContext db;
 

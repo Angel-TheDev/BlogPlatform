@@ -15,7 +15,7 @@ namespace BlogPlatform.Repositories
             this.db = db;
         }
 
-        public void Create(Post post)
+        public void Create(Tag tag)
         {
             throw new NotImplementedException();
         }

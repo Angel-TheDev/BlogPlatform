@@ -17,11 +17,11 @@ namespace BlogPlatform.Controllers
             this.postRepo = postRepo;
         }
 
-        public ViewResult Details(int id)
-        {
-            var model = postRepo.GetByTagId(id);
-            return View(model);
-        }
+        //public ViewResult Details(int id)
+        //{
+        //    var model = postRepo.GetByTagId(id);
+        //    return View(model);
+        //}
 
         public ViewResult AllBlogs()
         {
