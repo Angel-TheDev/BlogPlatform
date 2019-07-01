@@ -3,11 +3,12 @@
     Layout = "_Layout";
 }
 
-@foreach (var tp in Model)
+@foreach (var cat in Model)
 {
-    @tp.post.Title
-    @tp.post.Author
-    @tp.post.Date
- 
+    <p>@cat.post.Title</p>
+    <p>@cat.post.Author</p>
+    <p>@cat.post.Date</p>
+    <p><a href="/TagPosts/Details/@cat.PostId">TestLink</a></p>
+    <hr />
 }
 
