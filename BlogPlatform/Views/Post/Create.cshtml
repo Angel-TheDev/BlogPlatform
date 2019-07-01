@@ -1,7 +1,6 @@
 ﻿@model BlogPlatform.Model.Post
 
 @{
-    ViewData["Title"] = "Create";
     Layout = "_Layout";
 }
 @addTagHelper * ,Microsoft.AspNetCore.Mvc.TagHelpers
@@ -36,7 +35,7 @@
             </div>
             <div class="form-group">
                 <input asp-for="CategoryId" type="hidden" value="@ViewBag.CatID" class="form-control" />
-                 <a href="~/Category/Index/">Back to List</a>  @*Just created a random link so it wont be broken*@
+                 <a href="~/Post/AllBlogs/">Back to List</a>  
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />

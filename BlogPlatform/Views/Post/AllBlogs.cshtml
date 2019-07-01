@@ -1,8 +1,7 @@
 ﻿
 @model IEnumerable<BlogPlatform.Model.Post>
 @{
-    ViewData["Title"] = "Detail";
-    Layout = null;
+    Layout = "_Layout";
 }
 
 
@@ -11,6 +10,6 @@
     <p>@cat.Title</p>
     <p>@cat.Author</p>
     <p>@cat.Date</p>
-    <p><a href="/TagPosts/Details/@cat.PostId">TestLink</a></p>
+    <p><a href="/TagPosts/Details/@cat.PostId">Select Post</a></p>
     <hr />
 }
