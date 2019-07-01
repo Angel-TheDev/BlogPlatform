@@ -35,6 +35,7 @@ namespace BlogPlatform.Repositories
             throw new NotImplementedException();
         }
 
+
         public void Create(Post post)
         {
             throw new NotImplementedException();
