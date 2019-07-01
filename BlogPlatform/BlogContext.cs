@@ -55,7 +55,7 @@ namespace BlogPlatform.Repositories
             modelBuilder.Entity<Post>().HasData(
                 new Post
                 {
-                    Id = 1,
+                    ID = 1,
                     Title = "Coding Bootcamps",
                     Body = "Lorem Ipsum",
                     Author = "Matt V",
@@ -81,7 +81,7 @@ namespace BlogPlatform.Repositories
             modelBuilder.Entity<Post>().HasData(
                 new Post
                 {
-                    Id = 2,
+                    ID = 2,
                     Title = "Visual Studio",
                     Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
                     Author = "Angel",
@@ -106,7 +106,7 @@ namespace BlogPlatform.Repositories
             modelBuilder.Entity<Post>().HasData(
                 new Post
                 {
-                    Id = 3,
+                    ID = 3,
                     Title = "Ford Mustang",
                     Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
                     Author = "Carla",
@@ -132,7 +132,7 @@ namespace BlogPlatform.Repositories
             modelBuilder.Entity<Post>().HasData(
                 new Post
                 {
-                    Id = 4,
+                    ID = 4,
                     Title = "Ford GT",
                     Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
                     Author = "Sally",

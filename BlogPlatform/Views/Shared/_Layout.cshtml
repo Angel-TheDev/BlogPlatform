@@ -11,17 +11,27 @@
 
 <body>
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#home">Create</a>
+        <a href="/Home/Index">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Create
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/Post/Create/1">Software Blog</a>
+                <a href="/Post/Create/2">Car Blog</a>
+                
+            </div>
+        </div>
         <div class="dropdown">
             <button class="dropbtn">
                 Blogs
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#">All Blogs</a>
-                <a href="#">Software</a>
-                <a href="#">Cars</a>
+                <a href="/Post/Allblogs">All Blogs</a>
+                <a href="/Post/Details/1">Software</a>
+                <a href="/Post/Details/2">Cars</a>
             </div>
         </div>
         <div class="dropdown">

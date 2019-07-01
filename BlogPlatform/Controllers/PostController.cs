@@ -39,9 +39,23 @@ namespace BlogPlatform.Controllers
         [HttpPost]
         public ActionResult Delete(Post post)
         {
-            int rbid = post.Id;
+            int rbid = post.ID;
             postRepo.Delete(post);
 
+            return RedirectToAction("AllBlogs");
+        }
+
+        [HttpGet]
+        public ViewResult Create(int id)
+        {
+            ViewBag.CatID = id;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Post post)
+        {
+            postRepo.Create(post);
             return RedirectToAction("AllBlogs");
         }
     }

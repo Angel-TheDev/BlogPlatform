@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BlogPlatform.Model;
 
 namespace BlogPlatform.Repositories
 {
@@ -11,7 +12,6 @@ namespace BlogPlatform.Repositories
         T GetById(int id);
         IEnumerable<T> GetByTagId(int ID);
         void Delete(T obj);
-
-
+        void Create(Post post);
     }
 }

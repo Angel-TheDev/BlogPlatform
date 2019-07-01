@@ -15,6 +15,11 @@ namespace BlogPlatform.Repositories
             this.db = db;
         }
 
+        public void Create(Post post)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Delete(Category obj)
         {
             throw new NotImplementedException();
