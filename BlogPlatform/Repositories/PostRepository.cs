@@ -22,7 +22,7 @@ namespace BlogPlatform.Repositories
 
         public Post GetById(int id)
         {
-            return db.Posts.Single(c => c.ID == id);
+            return db.Posts.Single(c => c.PostId == id);
         }
 
         public IEnumerable<Post> GetByTagId(int ID)
@@ -38,9 +38,9 @@ namespace BlogPlatform.Repositories
 
         public void Create(Post post)
         {
-
             db.Posts.Add(post);
             db.SaveChanges();
         }
     }
     }
+    

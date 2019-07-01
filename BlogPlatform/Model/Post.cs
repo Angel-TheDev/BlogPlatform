@@ -7,7 +7,7 @@ namespace BlogPlatform.Model
 {
     public class Post
     {
-        public int ID { get; set; }
+        public int PostId { get; set; }
         public string Title { get; set; }
         public string Body { get; set; }
         public string Author { get; set; }
@@ -17,5 +17,10 @@ namespace BlogPlatform.Model
 
         public virtual Category category { get; set; }
         public int CategoryId { get; set; }
+
+        public Post()
+        {
+
+        }
     }
 }

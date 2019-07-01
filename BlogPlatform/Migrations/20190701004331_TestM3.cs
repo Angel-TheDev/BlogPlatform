@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BlogPlatform.Migrations
 {
-    public partial class M2Test : Migration
+    public partial class TestM3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,7 +25,7 @@ namespace BlogPlatform.Migrations
                 name: "Posts",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    PostId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Title = table.Column<string>(nullable: true),
                     Body = table.Column<string>(nullable: true),
@@ -35,7 +35,7 @@ namespace BlogPlatform.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Posts", x => x.Id);
+                    table.PrimaryKey("PK_Posts", x => x.PostId);
                     table.ForeignKey(
                         name: "FK_Posts_Categories_CategoryId",
                         column: x => x.CategoryId,
@@ -51,16 +51,16 @@ namespace BlogPlatform.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
-                    postId = table.Column<int>(nullable: true)
+                    PostId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Tags", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Tags_Posts_postId",
-                        column: x => x.postId,
+                        name: "FK_Tags_Posts_PostId",
+                        column: x => x.PostId,
                         principalTable: "Posts",
-                        principalColumn: "Id",
+                        principalColumn: "PostId",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -79,7 +79,7 @@ namespace BlogPlatform.Migrations
                         name: "FK_TagPostsdb_Posts_PostId",
                         column: x => x.PostId,
                         principalTable: "Posts",
-                        principalColumn: "Id",
+                        principalColumn: "PostId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_TagPostsdb_Tags_TagId",
@@ -100,7 +100,7 @@ namespace BlogPlatform.Migrations
 
             migrationBuilder.InsertData(
                 table: "Tags",
-                columns: new[] { "Id", "Name", "postId" },
+                columns: new[] { "Id", "Name", "PostId" },
                 values: new object[,]
                 {
                     { 1, "Education", null },
@@ -110,13 +110,13 @@ namespace BlogPlatform.Migrations
 
             migrationBuilder.InsertData(
                 table: "Posts",
-                columns: new[] { "Id", "Author", "Body", "CategoryId", "Date", "Title" },
+                columns: new[] { "PostId", "Author", "Body", "CategoryId", "Date", "Title" },
                 values: new object[,]
                 {
-                    { 1, "Matt V", "Lorem Ipsum", 1, new DateTime(2019, 6, 30, 16, 13, 8, 585, DateTimeKind.Local), "Coding Bootcamps" },
-                    { 2, "Angel", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 1, new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), "Visual Studio" },
-                    { 3, "Carla", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), "Ford Mustang" },
-                    { 4, "Sally", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), "Ford GT" }
+                    { 1, "Matt V", "Lorem Ipsum", 1, new DateTime(2019, 6, 30, 20, 43, 30, 577, DateTimeKind.Local), "Coding Bootcamps" },
+                    { 2, "Angel", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 1, new DateTime(2019, 6, 30, 20, 43, 30, 580, DateTimeKind.Local), "Visual Studio" },
+                    { 3, "Carla", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 6, 30, 20, 43, 30, 580, DateTimeKind.Local), "Ford Mustang" },
+                    { 4, "Sally", "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", 2, new DateTime(2019, 6, 30, 20, 43, 30, 580, DateTimeKind.Local), "Ford GT" }
                 });
 
             migrationBuilder.InsertData(
@@ -141,9 +141,9 @@ namespace BlogPlatform.Migrations
                 column: "PostId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tags_postId",
+                name: "IX_Tags_PostId",
                 table: "Tags",
-                column: "postId");
+                column: "PostId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

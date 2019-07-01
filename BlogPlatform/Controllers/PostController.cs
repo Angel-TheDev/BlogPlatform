@@ -39,7 +39,7 @@ namespace BlogPlatform.Controllers
         [HttpPost]
         public ActionResult Delete(Post post)
         {
-            int rbid = post.ID;
+            int rbid = post.PostId;
             postRepo.Delete(post);
 
             return RedirectToAction("AllBlogs");

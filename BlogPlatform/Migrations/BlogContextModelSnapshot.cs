@@ -39,7 +39,7 @@ namespace BlogPlatform.Migrations
 
             modelBuilder.Entity("BlogPlatform.Model.Post", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PostId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -53,17 +53,17 @@ namespace BlogPlatform.Migrations
 
                     b.Property<string>("Title");
 
-                    b.HasKey("Id");
+                    b.HasKey("PostId");
 
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Posts");
 
                     b.HasData(
-                        new { Id = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 16, 13, 8, 585, DateTimeKind.Local), Title = "Coding Bootcamps" },
-                        new { Id = 2, Author = "Angel", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), Title = "Visual Studio" },
-                        new { Id = 3, Author = "Carla", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), Title = "Ford Mustang" },
-                        new { Id = 4, Author = "Sally", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 6, 30, 16, 13, 8, 588, DateTimeKind.Local), Title = "Ford GT" }
+                        new { PostId = 1, Author = "Matt V", Body = "Lorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 20, 43, 30, 577, DateTimeKind.Local), Title = "Coding Bootcamps" },
+                        new { PostId = 2, Author = "Angel", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 1, Date = new DateTime(2019, 6, 30, 20, 43, 30, 580, DateTimeKind.Local), Title = "Visual Studio" },
+                        new { PostId = 3, Author = "Carla", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 6, 30, 20, 43, 30, 580, DateTimeKind.Local), Title = "Ford Mustang" },
+                        new { PostId = 4, Author = "Sally", Body = "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum", CategoryId = 2, Date = new DateTime(2019, 6, 30, 20, 43, 30, 580, DateTimeKind.Local), Title = "Ford GT" }
                     );
                 });
 
@@ -75,11 +75,11 @@ namespace BlogPlatform.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int?>("postId");
+                    b.Property<int?>("PostId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("postId");
+                    b.HasIndex("PostId");
 
                     b.ToTable("Tags");
 
@@ -124,7 +124,7 @@ namespace BlogPlatform.Migrations
                 {
                     b.HasOne("BlogPlatform.Model.Post", "post")
                         .WithMany()
-                        .HasForeignKey("postId");
+                        .HasForeignKey("PostId");
                 });
 
             modelBuilder.Entity("BlogPlatform.Model.TagPosts", b =>
