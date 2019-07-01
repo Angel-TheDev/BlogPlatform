@@ -36,6 +36,20 @@ namespace BlogPlatform.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public ViewResult Edit(int id)
+        {
+            var model = postRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Post post)
+        {
+            postRepo.Edit(post);
+            return RedirectToAction("..Post/AllBlogs/"+post.CategoryId);
+        }
+
         [HttpPost]
         public ActionResult Delete(Post post)
         {

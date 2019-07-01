@@ -14,7 +14,6 @@ namespace BlogPlatform.Model
         public DateTime Date { get; set; }
         public virtual List<TagPosts> TagPosts { get; set; }
 
-
         public virtual Category category { get; set; }
         public int CategoryId { get; set; }
 

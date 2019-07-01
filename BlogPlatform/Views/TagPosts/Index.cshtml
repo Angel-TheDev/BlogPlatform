@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<BlogPlatform.Model.TagPosts>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = "_Layout";
 }
@@ -8,6 +9,6 @@
     @tp.post.Title
     @tp.post.Author
     @tp.post.Date
- 
+
 }
 

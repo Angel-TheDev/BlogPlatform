@@ -1,18 +1,20 @@
 ﻿@model BlogPlatform.Model.TagPosts
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 @{
     Layout = "_Layout";
 }
 
-<h2>
-    <p>@Model.post.Title</p>
-</h2>
-<hr />
-<p>@Model.post.Author</p>
-<p>@Model.post.Date</p>
-<hr />
-<p>@Model.post.Body</p>
-<hr />
-<a href="~/Post/Edit/@Model.PostId">Edit</a>
-<a href="~/post/delete/@Model.PostId">Delete</a>
-<p>Tags:</p>
-<p>@Model.tag</p>
+@*<h2>
+        <p>@Model.post.Title</p>
+    </h2>
+    <hr />
+    <p>@Model.post.Author</p>
+    <p>@Model.post.Date</p>
+    <hr />
+    <p>@Model.post.Body</p>
+    <hr />
+    <a href="~/Post/Edit/@Model.PostId">Edit</a>
+    <a href="~/post/delete/@Model.PostId">Delete</a>
+    <p>Tags:</p>
+    <p>@Model.tag</p>*@

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogPlatform.Repositories
 {
-    public class CategoryRepository : IRepository<Category>
+    public class CategoryRepository /*: IRepository<Category>*/
     {
         private BlogContext db;
 
@@ -15,10 +15,16 @@ namespace BlogPlatform.Repositories
             this.db = db;
         }
 
-        public void Create(Post post)
+        public void Create(Category obj)
         {
             throw new NotImplementedException();
         }
+
+        public void Edit(Category obj)
+        {
+            throw new NotImplementedException();
+        }
+
 
         public void Delete(Category obj)
         {

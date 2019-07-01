@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogPlatform.Repositories
 {
-    public class TagPostsRepository : IRepository<TagPosts>
+    public class TagPostsRepository  IRepository<TagPosts>
     {
         private BlogContext db;
 
@@ -17,13 +17,13 @@ namespace BlogPlatform.Repositories
 
         public IEnumerable<TagPosts> GetAll()
         {
-            return db.TagPostsdb.ToList();
+        throw new NotImplementedException();
         }
 
-        public IEnumerable<TagPosts> GetByTagId(int ID)
-        {
-            return db.TagPostsdb.Where(c => c.TagId == ID);
-        }
+        //public IEnumerable<TagPosts> GetById(int Id)
+        //{
+        //    return db.TagPostsdb.Where(c => c.TagId == Id);
+        //}
 
         public TagPosts GetById(int id)
         {
@@ -36,7 +36,13 @@ namespace BlogPlatform.Repositories
         }
 
 
-        public void Create(Post post)
+        public void Create(TagPosts tagPosts)
+        {
+            db.TagPosts.Add(tagPosts);
+            db.SaveChanges();
+        }
+
+        public void Edit(TagPosts obj)
         {
             throw new NotImplementedException();
         }

@@ -1,7 +1,31 @@
-﻿
+﻿@model IEnumerable<BlogPlatform.Model.Post>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = "_layout";
 }
 
-<h2>Post</h2>
+<!DOCTYPE html>
 
+<html>
+<h2>Post</h2>
+<ul>
+@foreach (var Post in Model)
+{
+    <h2>
+        <li>@Post.Title</li>
+    </h2>
+    <hr />
+    <li>
+        @Post.Author</li>
+    <li>@Post.Date</li>
+    <hr />
+    <li>@Post.Body</li>
+    <hr />
+    <a href="~/Post/Edit/@Post.PostId">Edit</a>
+    <a href="~/Post/Delete/@Post.PostId">Delete</a>
+    <li>Tags:</li>
+    @*<p>@Model.tag</p>*@
+}
+</ul>
+
+</html>

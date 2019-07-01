@@ -25,6 +25,11 @@ namespace BlogPlatform.Repositories
             throw new NotImplementedException();
         }
 
+        public void Edit(Tag obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Tag> GetAll()
         {
             throw new NotImplementedException();

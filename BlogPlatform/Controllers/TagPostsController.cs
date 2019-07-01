@@ -10,11 +10,11 @@ namespace BlogPlatform.Controllers
 {
     public class TagPostsController : Controller
     {
-        IRepository<TagPosts> tagRepo;
+        IRepository<TagPosts> tagpostsRepo;
 
-        public TagPostsController(IRepository<TagPosts> tagRepo)
+        public TagPostsController(IRepository<TagPosts> tagpostsRepo)
         {
-            this.tagRepo = tagRepo;
+            this.tagpostsRepo = tagpostsRepo;
         }
 
         //public ViewResult Index()
@@ -23,17 +23,31 @@ namespace BlogPlatform.Controllers
         //    return View(model);
         //}
 
-        public ViewResult Index(int id)
-        {
-            var model = tagRepo.GetByTagId(id);
-            return View(model);
-        }
+        //public ViewResult Index(int id)
+        //{
+        //    var model = tagRepo.GetByTagId(id);
+        //    return View(model);
+        //}
 
-        public ViewResult Details(int id)
-        {
-            var model = tagRepo.GetById(id);
-            return View(model);
-        }
+        //public ViewResult Details(int id)
+        //{
+        //    var model = tagRepo.GetById(id);
+        //    return View(model);
+        //}
 
+
+        [HttpGet]
+        public ViewResult Create(int id)
+        {
+
+            ViewBag.PostId = id;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(TagPosts tagposts)
+        {
+            tagpostsRepo.Create(tagposts);
+            return RedirectToAction("../TagPosts//");
+        }
     }
 }

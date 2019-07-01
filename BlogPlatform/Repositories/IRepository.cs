@@ -12,6 +12,7 @@ namespace BlogPlatform.Repositories
         T GetById(int id);
         IEnumerable<T> GetByTagId(int ID);
         void Delete(T obj);
-        void Create(Post post);
+        void Create(T obj);
+        void Edit(T obj);
     }
 }
